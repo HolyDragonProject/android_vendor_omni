@@ -113,3 +113,10 @@ ifeq ($(ROM_BUILDTYPE),HOMEMADE)
     WITH_DEXPREOPT := true
     WITH_DEXPREOPT_PIC := true
 endif
+
+# Include SDCLANG definitions if it is requested and available
+ifeq ($(HOST_OS),linux)
+    ifneq ($(wildcard vendor/qcom/sdclang/),)
+        include vendor/omni/sdclang/sdclang.mk
+    endif
+endif
