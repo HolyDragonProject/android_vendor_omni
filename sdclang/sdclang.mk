@@ -19,4 +19,4 @@ SDCLANG_PATH := vendor/qcom/sdclang/bin
 
 SDCLANG_LTO_DEFS := vendor/omni/sdclang/sdllvm-lto-defs.mk
 
-SDCLANG_COMMON_FLAGS := -O3
+SDCLANG_COMMON_FLAGS := -O3 -mcpu=cortex-a57 -mllvm -polly
