@@ -19,4 +19,4 @@ SDCLANG_PATH := vendor/qcom/sdclang/bin
 
 SDCLANG_LTO_DEFS := vendor/omni/sdclang/sdllvm-lto-defs.mk
 
-SDCLANG_COMMON_FLAGS := -O3 -mcpu=cortex-a57 -mllvm -polly
+SDCLANG_COMMON_FLAGS := -O3 -march=armv8-a -mcpu=cortex-a53 -mfpu=crypto-neon-fp-armv8 -ffp-contract=on -mllvm -polly
