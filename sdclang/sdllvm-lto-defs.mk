@@ -1,3 +1,27 @@
+LLVM_PREBUILTS_PATH_QCOM := vendor/qcom/sdclang/bin
+LLVM_PREBUILTS_OPT_PATH_QCOM := vendor/qcom/sdclang/lib/clang/4.0.2/lib/
+
+CLANG_QCOM_EXTRA_OPT_LIBRARIES_LINK := \
+$(LLVM_PREBUILTS_OPT_PATH_QCOM)/linux-propri_rt/libclang_rt.optlibc-krait-android.a \
+$(LLVM_PREBUILTS_OPT_PATH_QCOM)/linux-propri_rt/libclang_rt.translib-arm-android.a \
+$(LLVM_PREBUILTS_OPT_PATH_QCOM)/linux-propri_rt/libclang_rt.optlibc-krait.a \
+$(LLVM_PREBUILTS_OPT_PATH_QCOM)/linux-propri_rt/libclang_rt.translib-arm.a
+
+$(LOCAL_2ND_ARCH_VAR_PREFIX)TARGET_LIBGCC += $(CLANG_QCOM_EXTRA_OPT_LIBRARIES_LINK)
+
+CLANG_QCOM_EXTRA_OPT_LIBGCC := \
+-L $(LLVM_PREBUILTS_OPT_PATH_QCOM)/linux/ \
+-l clang_rt.builtins-arm-android \
+-l clang_rt.asan-arm-android \
+-l clang_rt.builtins-arm \
+-l clang_rt.asan-arm
+
+CLANG_QCOM_EXTRA_OPT_LIBRARIES := \
+libclang_rt.optlibc-krait-android \
+libclang_rt.translib-arm-android \
+libclang_rt.optlibc-krait \
+libclang_rt.translib-arm
+
 ifeq ($(LOCAL_MODULE_CLASS), STATIC_LIBRARIES)
 # For STATIC_LIBRARIES we need to use SD LLVM's archiver and archiver flags.
 
