@@ -19,5 +19,20 @@ SDCLANG_PATH := vendor/qcom/sdclang/bin
 
 SDCLANG_LTO_DEFS := vendor/omni/sdclang/sdllvm-lto-defs.mk
 
-SDCLANG_COMMON_FLAGS := -O3 -march=armv8-a -mcpu=cortex-a53 -mfpu=crypto-neon-fp-armv8 -ffp-contract=on -mllvm -polly \
-			-mllvm -favor-r0-7 -falign-inner-loops -ftree-vectorize -fno-prefetch-loop-arrays
+SDCLANG_COMMON_FLAGS := -O3 -march=armv8-a+crc+lse+crypto+fp+simd -mcpu=kryo+crc+crypto+fp+simd -mfpu=crypto-neon-fp-armv8 \
+			-mllvm -polly \
+			-mllvm -disable-thumb-scale-addressing=true \
+			-mllvm -enable-round-robin-RA \
+			-mllvm -enable-select-to-intrinsics \
+			-mllvm -favor-r0-7 -ffp-contract=on \
+			-ftree-vectorize -fslp-vectorize \
+			-foptimize-sibling-calls -funit-at-a-time 
+
+LTO_FLAGS	:= -flto -mllvm -fuse-ld=qcld
+
+LLVM_FLAGS	:= -falign-inner-loops -fvectorize-loops -floop-pragma \
+		-mllvm -disable-thumb-scale-addressing=true \
+		-mllvm -enable-round-robin-RA \
+		-mllvm -enable-select-to-intrinsics \
+		-mllvm -favor-r0-7 -falign-inner-loops -foptimize-sibling-calls -funit-at-a-time 
+
