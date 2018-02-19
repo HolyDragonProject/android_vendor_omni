@@ -32,12 +32,15 @@ libclang_rt.translib-aarch64-android
 ifeq ($(LOCAL_MODULE_CLASS), STATIC_LIBRARIES)
 # For STATIC_LIBRARIES we need to use SD LLVM's archiver and archiver flags.
 
+AS := $(SDCLANG_PATH)/llvm-as $(LLVM_FLAGS) $(LTO_FLAGS)
 AR := $(SDCLANG_PATH)/llvm-ar
 ARFLAGS := crsD
+NM := $(SDCLANG_PATH)/llvm-nm
 
 # For 32 bit
 $(LOCAL_BUILT_MODULE) : $(combo_2nd_arch_prefix)TARGET_AR := $(AR)
 $(LOCAL_BUILT_MODULE) : $(combo_var_prefix)GLOBAL_ARFLAGS := $(ARFLAGS)
+$(LOCAL_BUILT_MODULE) : TARGET_GLOBAL_ASFLAGS := $(LLVM_FLAGS) $(LTO_FLAGS)
 
 # For 64 bit
 intermediates := $(call local-intermediates-dir,,$(LOCAL_2ND_ARCH_VAR_PREFIX))
@@ -45,6 +48,7 @@ LOCAL_BUILT_MODULE_64 := $(intermediates)/$(my_built_module_stem)
 
 $(LOCAL_BUILT_MODULE_64) : TARGET_AR := $(AR)
 $(LOCAL_BUILT_MODULE_64) : TARGET_GLOBAL_ARFLAGS := $(ARFLAGS)
+$(LOCAL_BUILT_MODULE_64) : TARGET_GLOBAL_ASFLAGS := $(LLVM_FLAGS) $(LTO_FLAGS)
 
 else
 # For SHARED_LIBRARIES and EXECUTABLES we need to filter out flags not
