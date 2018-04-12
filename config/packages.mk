@@ -1,7 +1,6 @@
 # Additional apps
 PRODUCT_PACKAGES += \
     MonthCalendarWidget \
-    OpenDelta \
     OmniSwitch \
     Chromium \
     OmniJaws \
