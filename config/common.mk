@@ -158,9 +158,9 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/google/ui/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg 
 
 # Razer UI Sounds
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/sounds/razer/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
-    vendor/omni/prebuilt/sounds/razer/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg
+#PRODUCT_COPY_FILES += \
+#    vendor/omni/prebuilt/sounds/razer/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
+#    vendor/omni/prebuilt/sounds/razer/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg
 
 # Extra Alarms
 PRODUCT_COPY_FILES += \
