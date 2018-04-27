@@ -76,7 +76,10 @@ PRODUCT_PACKAGES += \
     AccentMaroon \
     AccentPumpkin \
     AccentPink \
-    AccentCrimson
+    AccentCrimson \
+    AccentBlack \
+    AccentAmber \
+    AccentGrey
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
