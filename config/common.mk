@@ -143,7 +143,6 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/google/ui/KeypressReturn.ogg:system/media/audio/ui/KeypressReturn.ogg \
     vendor/omni/prebuilt/sounds/google/ui/KeypressSpacebar.ogg:system/media/audio/ui/KeypressSpacebar.ogg \
     vendor/omni/prebuilt/sounds/google/ui/KeypressStandard.ogg:system/media/audio/ui/KeypressStandard.ogg \
-    vendor/omni/prebuilt/sounds/google/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
     vendor/omni/prebuilt/sounds/google/ui/LowBattery.ogg:system/media/audio/ui/LowBattery.ogg \
     vendor/omni/prebuilt/sounds/google/ui/NFCFailure.ogg:system/media/audio/ui/NFCFailure.ogg \
     vendor/omni/prebuilt/sounds/google/ui/NFCInitiated.ogg:system/media/audio/ui/NFCInitiated.ogg \
@@ -152,15 +151,16 @@ PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/sounds/google/ui/NFCTransferInitiated.ogg:system/media/audio/ui/NFCTransferInitiated.ogg \
     vendor/omni/prebuilt/sounds/google/ui/Trusted.ogg:system/media/audio/ui/Trusted.ogg \
     vendor/omni/prebuilt/sounds/google/ui/Undock.ogg:system/media/audio/ui/Undock.ogg \
-    vendor/omni/prebuilt/sounds/google/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg \
     vendor/omni/prebuilt/sounds/google/ui/VideoRecord.ogg:system/media/audio/ui/VideoRecord.ogg \
     vendor/omni/prebuilt/sounds/google/ui/VideoStop.ogg:system/media/audio/ui/VideoStop.ogg \
     vendor/omni/prebuilt/sounds/google/ui/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg 
+#    vendor/omni/prebuilt/sounds/google/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg \
+#    vendor/omni/prebuilt/sounds/google/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
 
 # Razer UI Sounds
-#PRODUCT_COPY_FILES += \
-#    vendor/omni/prebuilt/sounds/razer/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
-#    vendor/omni/prebuilt/sounds/razer/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg
+PRODUCT_COPY_FILES += \
+    vendor/omni/prebuilt/sounds/razer/ui/Lock.ogg:system/media/audio/ui/Lock.ogg \
+    vendor/omni/prebuilt/sounds/razer/ui/Unlock.ogg:system/media/audio/ui/Unlock.ogg
 
 # Extra Alarms
 PRODUCT_COPY_FILES += \
