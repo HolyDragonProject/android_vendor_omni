@@ -113,3 +113,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ExtraFonts
+
+# Spectrum
+PRODUCT_PACKAGES += \
+    Spectrum
