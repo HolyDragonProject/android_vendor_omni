@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="omni_color3">#ff8b64ce</color> <!-- ACCENT  LIGHT -->
-    <color name="omni_color4">#ff532f93</color> <!-- ACCENT  DARK -->
+    <color name="omni_color3">#ff673AB7</color> <!-- ACCENT  LIGHT -->
+    <color name="omni_color4">#ff673AB7</color> <!-- ACCENT  DARK -->
     <color name="omni_color5">#ff673AB7</color> <!-- ACCENT -->
 
     <!-- accents -->
