@@ -117,3 +117,7 @@ PRODUCT_PACKAGES += \
 # Spectrum
 PRODUCT_PACKAGES += \
     Spectrum
+
+# HDK-Mod
+PRODUCT_PACKAGES += \
+    HDK-Mod
