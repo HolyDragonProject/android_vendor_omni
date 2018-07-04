@@ -251,5 +251,6 @@ endif
 ifeq ($(HOST_OS),linux)
     ifneq ($(wildcard vendor/qcom/sdclang/),)
         include vendor/omni/sdclang/sdclang.mk
+        include vendor/omni/sdclang/sdllvm-lto-defs.mk
     endif
 endif
