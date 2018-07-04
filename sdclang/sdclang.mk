@@ -17,7 +17,7 @@ SDCLANG_FORCED ?= false
 
 LTO_FLAGS	:= -flto -mllvm -fuse-ld=qcld
 
-LLVM_FLAGS	:= -falign-inner-loops -fvectorize-loops -floop-pragma \
+LLVM_FLAGS	:= -fvectorize-loops -floop-pragma \
 		-mllvm -disable-thumb-scale-addressing=true \
 		-mllvm -enable-round-robin-RA \
 		-mllvm -enable-select-to-intrinsics  
